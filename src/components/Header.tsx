@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Search, Coins } from "lucide-react";
+import { Search, Coins, Wallet } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
@@ -68,6 +68,12 @@ const Header = () => {
                   <Link to="/tokens" className="text-blockchain-foreground/70 hover:text-blockchain-primary transition-colors flex items-center">
                     <Coins className="h-4 w-4 mr-1" />
                     Tokens
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/wallet" className="text-blockchain-foreground/70 hover:text-blockchain-primary transition-colors flex items-center">
+                    <Wallet className="h-4 w-4 mr-1" />
+                    Wallet
                   </Link>
                 </li>
               </ul>
