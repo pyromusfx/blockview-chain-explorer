@@ -1,7 +1,7 @@
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Search } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom";
+import { Search, Coins } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
@@ -56,6 +56,22 @@ const Header = () => {
               BlockView
             </h1>
             <span className="ml-2 text-sm text-blockchain-accent">Chain Explorer</span>
+            
+            <nav className="ml-8 hidden md:flex">
+              <ul className="flex space-x-6">
+                <li>
+                  <Link to="/" className="text-blockchain-foreground/70 hover:text-blockchain-primary transition-colors">
+                    Blocks
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/tokens" className="text-blockchain-foreground/70 hover:text-blockchain-primary transition-colors flex items-center">
+                    <Coins className="h-4 w-4 mr-1" />
+                    Tokens
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
           
           <form onSubmit={handleSearch} className="w-full md:w-2/3 flex">

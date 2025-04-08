@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import BlockPage from "./pages/BlockPage";
 import TransactionPage from "./pages/TransactionPage";
 import AddressPage from "./pages/AddressPage";
+import TokensPage from "./pages/TokensPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/block/:blockNumber" element={<BlockPage />} />
           <Route path="/tx/:txHash" element={<TransactionPage />} />
           <Route path="/address/:address" element={<AddressPage />} />
+          <Route path="/tokens" element={<TokensPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

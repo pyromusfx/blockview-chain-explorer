@@ -66,7 +66,7 @@ export interface TransactionReceipt {
 class BlockchainService {
   private requestId = 1;
 
-  private async sendRequest<T>(method: string, params: any[] = []): Promise<T> {
+  async sendRequest<T>(method: string, params: any[] = []): Promise<T> {
     const request: JsonRpcRequest = {
       jsonrpc: "2.0",
       method,
