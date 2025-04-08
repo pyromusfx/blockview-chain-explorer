@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Clock, Receipt, DollarSign, GasPump } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Receipt, DollarSign, Fuel } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -178,7 +178,7 @@ const TransactionPage = () => {
                   label="Transaction Fee" 
                   value={
                     <div className="flex items-center gap-1">
-                      <GasPump className="h-4 w-4 text-blockchain-muted" />
+                      <Fuel className="h-4 w-4 text-blockchain-muted" />
                       {receipt ? (
                         <span>
                           {formatEther(

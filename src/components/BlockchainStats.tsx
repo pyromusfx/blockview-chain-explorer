@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Blocks, Hash, GasPump } from "lucide-react";
+import { Blocks, Hash, Fuel } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { blockchainService } from "@/services/blockchainService";
@@ -60,7 +60,7 @@ const BlockchainStats = () => {
       <Card className="bg-blockchain-card border-blockchain-border">
         <CardContent className="p-4 flex items-center space-x-4">
           <div className="bg-blockchain-muted/20 p-3 rounded-full">
-            <GasPump className="h-6 w-6 text-blockchain-muted" />
+            <Fuel className="h-6 w-6 text-blockchain-muted" />
           </div>
           <div>
             <p className="text-sm text-blockchain-foreground/60">Node URL</p>
